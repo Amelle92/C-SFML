@@ -1,13 +1,13 @@
-all: PhotoMagic
+all: Encrypt
 
-PhotoMagic: PhotoMagic.o LFSR.o
-		g++ -g PhotoMagic.o LFSR.o -o PhotoMagic -lsfml-system -lsfml-graphics -lsfml-window
+Encrypt: Encrypt.o LFSR.o
+		g++ -g Encrypt.o LFSR.o -o Encrypt -lsfml-system -lsfml-graphics -lsfml-window
 
-PhotoMagic.o: PhotoMagic.cpp
-		g++ -g -c PhotoMagic.cpp
+Encrypt.o: Encrypt.cpp
+		g++ -g -c Encrypt.cpp
 		
 LFSR.o: LFSR.cpp LFSR.hpp
 		g++ -g -c LFSR.cpp
 		
 clean:
-		rm -rf *.o *.gch *~ PhotoMagic
+		rm -rf *.o *.gch *~ Encrypt
